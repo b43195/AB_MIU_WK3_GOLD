@@ -203,16 +203,24 @@ var showAllPeeps = function(){
 			window.location.reload(true);
 		}
 	}
+	
+/*	var count = searchContents.childNodes.length;
+	if(count >= 1){
+		while(searchContents.firstChild){
+			searchContents.removeChild(searchContents.firstChild);
+		}
+	}*/
 
-/*	var addUl = document.createElement("ul")
+	var addUl = document.createElement("ul")
 	addUl.setAttribute("data-role","listview");
 	addUl.setAttribute("data-filter","true");
-	addUl.setAttribute("id","allPeeps");*/
+	addUl.setAttribute("id","allPeeps");
+
 
 	for(i=0; i <= localStorage.length; i++){
 		searchContents.appendChild(addUl);
-		var allPeeps=document.getElementById("allPeeps");
 		var addLi = document.createElement("li");
+		var allPeeps=document.getElementById("allPeeps");
 		allPeeps.appendChild(addLi);
 
 		var editDeleteLks = document.createElement("li");
@@ -532,6 +540,7 @@ $(document).ready(function(){
 	});
 });
 
+say(searchContents.length);
 //Event Listeners
 displayData.addEventListener("click", showAllPeeps);
 cleardata.addEventListener("click", clearLocal);
