@@ -204,10 +204,10 @@ var showAllPeeps = function(){
 		}
 	}
 
-	var addUl = document.createElement("ul")
+/*	var addUl = document.createElement("ul")
 	addUl.setAttribute("data-role","listview");
 	addUl.setAttribute("data-filter","true");
-	addUl.setAttribute("id","allPeeps");
+	addUl.setAttribute("id","allPeeps");*/
 
 	for(i=0; i <= localStorage.length; i++){
 		searchContents.appendChild(addUl);
